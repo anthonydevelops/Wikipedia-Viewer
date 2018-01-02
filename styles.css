@@ -1,3 +1,18 @@
 body {
-  
+  background: linear-gradient(45deg, pink, cyan);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Merriweather', serif;
+}
+
+.Title-Search {
+  margin: 20% 20%;
+}
+
+.search-bar {
+  margin: 5% 0;
+}
+
+img {
+  height: 75px;
 }
