@@ -3,7 +3,7 @@ A challenge project from **@freecodecamp** to implement a Wikipedia Viewer, whic
 - I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.
 - I can click a button to see a random Wikipedia entry.
 
-##Process
+## Process
 - [ ] Initial file commits
 - [ ] Structure html
 - [ ] Connect api(s) to display on webpage
