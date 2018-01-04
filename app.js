@@ -1,5 +1,7 @@
-const wikiResponse = document.querySelector(".container");
+//Global Variable(s)
+const queryResponse = document.querySelector("#response");
 
+//Check if the user hits "Enter" key
 document.addEventListener("keypress", (event) => {
   const keyName = event.key;
 
@@ -8,15 +10,16 @@ document.addEventListener("keypress", (event) => {
   };
 });
 
+//Check if the search is a valid operation
 function validateSearch() {
   const input = document.querySelector("#search").value;
   //Check if search field is empty
   if (input == null || input == "") {
     //Log empty search field error message to the user
-    const wikiError = document.querySelector("#response");
-    wikiError.className = "alert alert-warning";
+    queryResponse.className = "alert alert-warning";
+    queryResponse.setAttribute("role", "alert");
     const errorMsg = document.createTextNode("Invalid search of nothing. Try searching again!");
-    wikiError.appendChild(errorMsg);
+    queryResponse.appendChild(errorMsg);
   }
   else {
     const encodedQuery = encodeURIComponent(input);
@@ -46,5 +49,33 @@ function accessWiki(userQuery) {
 }
 
 function formatSearch(queryTitle, queryExcerpt, queryUrls) {
+  queryResponse.removeAttribute("role");
+  queryResponse.className = "card";
 
+  for(let i = 0; i < queryTitle.length; i++) {
+    //Card structure
+    const card = document.createElement("div");
+    card.className = "card-body";
+    //Card title
+    const head = document.createElement("h4");
+    const newTitle = document.createTextNode(queryTitle[i]);
+    head.className = "card-title";
+    head.appendChild(newTitle);
+    //Card summary
+    const summary = document.createElement("p");
+    const newExcerpt = document.createTextNode(queryExcerpt[i]);
+    summary.className = "card-text";
+    summary.appendChild(newExcerpt);
+    //Card link
+    const link = document.createElement("a");
+    const newBtnText = document.createTextNode("Visit Wiki");
+    link.className = "btn btn-info";
+    link.setAttribute("href", queryUrls[i]);
+    link.appendChild(newBtnText);
+    //Append nodes to response div
+    card.appendChild(head);
+    card.appendChild(summary);
+    card.appendChild(link);
+    queryResponse.appendChild(card);
+  }
 }
