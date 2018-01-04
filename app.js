@@ -12,6 +12,17 @@ document.addEventListener("keypress", (event) => {
 
 //Check if the search is a valid operation
 function validateSearch() {
+  //Remove previous search, if available
+  if (queryResponse.hasChildNodes()) {
+    for(let i = 0; i < 10; i++) {
+      const prev = queryResponse.firstChild;
+      if (prev == null || prev == "") {
+        break;
+      }
+      queryResponse.removeChild(prev);
+    }
+  }
+
   const input = document.querySelector("#search").value;
   //Check if search field is empty
   if (input == null || input == "") {
