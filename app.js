@@ -60,11 +60,14 @@ function accessWiki(userQuery) {
 
 function formatSearch(queryTitle, queryExcerpt, queryUrls) {
   queryResponse.removeAttribute("role");
-  queryResponse.className = "card";
+  queryResponse.className = "";
 
   for(let i = 0; i < queryTitle.length; i++) {
-    //Card structure
-    const card = document.createElement("div");
+    //Card Structure
+    const div = document.createElement("div");
+    div.className = "card mb-3";
+    //Card body
+    const body = document.createElement("div");
     card.className = "card-body";
     //Card title
     const head = document.createElement("h4");
@@ -81,11 +84,13 @@ function formatSearch(queryTitle, queryExcerpt, queryUrls) {
     const newBtnText = document.createTextNode("Visit Wiki");
     link.className = "btn btn-info";
     link.setAttribute("href", queryUrls[i]);
+    link.setAttribute("target", "_blank");
     link.appendChild(newBtnText);
     //Append nodes to response div
-    card.appendChild(head);
-    card.appendChild(summary);
-    card.appendChild(link);
-    queryResponse.appendChild(card);
+    body.appendChild(head);
+    body.appendChild(summary);
+    body.appendChild(link);
+    div.appendChild(body)
+    queryResponse.appendChild(div);
   }
 }

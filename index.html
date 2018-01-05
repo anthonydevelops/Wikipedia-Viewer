@@ -23,8 +23,11 @@
           </div>
           <input id="search" class="form-control form-control-lg" type="text" placeholder="Search wiki">
         </div>
+        <!-- Button to retrieve random wiki article -->
         <div class="d-flex justify-content-center">
-          <button type="button" id="random-btn"  class="btn btn-light btn-lg" onclick="randomSearch()">Feeling Lucky!</button>
+          <a id="random-btn" class="btn btn-info btn-lg" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" role="button">
+            <span class="ion-paper-airplane"></span> Random Wiki
+          </a>
         </div>
         <!-- Wiki response with article or error if no search field -->
         <div id="response"></div>
