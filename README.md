@@ -8,7 +8,7 @@ A challenge project from **@freecodecamp** to implement a Wikipedia Viewer, whic
 - [x] Structure html
 - [x] Connect api(s) to display on webpage
 - [x] Search wiki entries
-- [ ] Random wiki entries
-- [ ] Style webpage
+- [x] Random wiki entries
+- [x] Style webpage
 - [ ] *Optional* Twitter feed post?
 - [ ] *Optional* Deploy to Heroku?

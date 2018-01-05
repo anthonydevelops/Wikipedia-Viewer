@@ -68,7 +68,7 @@ function formatSearch(queryTitle, queryExcerpt, queryUrls) {
     div.className = "card mb-3";
     //Card body
     const body = document.createElement("div");
-    card.className = "card-body";
+    body.className = "card-body";
     //Card title
     const head = document.createElement("h4");
     const newTitle = document.createTextNode(queryTitle[i]);
