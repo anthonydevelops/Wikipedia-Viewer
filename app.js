@@ -22,7 +22,6 @@ function validateSearch() {
       queryResponse.removeChild(prev);
     }
   }
-
   const input = document.querySelector("#search").value;
   //Check if search field is empty
   if (input == null || input == "") {
