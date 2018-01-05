@@ -13,8 +13,9 @@ body {
   margin: 5% 0;
 }
 
-button {
-  margin: auto 0;
+#random-btn {
+  margin-top: -2%;
+  margin-bottom: 2%;
 }
 
 img {

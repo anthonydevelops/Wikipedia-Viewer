@@ -16,12 +16,17 @@
         <h1 class="text-center font-weight-bold">
           <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png"
           alt="Wikipedia Globe Logo"> Wikipedia Viewer</h1>
+        <!-- Searching interface with a randomized wikipedia button -->
         <div class="search-bar input-group">
           <div class="input-group-prepend">
             <button type="button" class="btn btn-secondary btn-lg ion-search" onclick="validateSearch()"></button>
           </div>
           <input id="search" class="form-control form-control-lg" type="text" placeholder="Search wiki">
         </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" id="random-btn"  class="btn btn-light btn-lg" onclick="randomSearch()">Feeling Lucky!</button>
+        </div>
+        <!-- Wiki response with article or error if no search field -->
         <div id="response"></div>
       </div>
 
