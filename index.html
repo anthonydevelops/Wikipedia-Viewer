@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700">
-    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link type="text/css" rel="stylesheet" href="styles.css">
-    <title>Wikipedia Viewer</title>
-  </head>
-  <body>
-    <div class="container">
 
-      <div class="input-area">
-        <h1 class="text-center font-weight-bold">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png"
-          alt="Wikipedia Globe Logo"> Wikipedia Viewer</h1>
-        <!-- Searching interface with a randomized wikipedia button -->
-        <div class="search-bar input-group">
-          <div class="input-group-prepend">
-            <button type="button" class="btn btn-secondary btn-lg ion-search" onclick="validateSearch()"></button>
-          </div>
-          <input id="search" class="form-control form-control-lg" type="text" placeholder="Search wiki">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700">
+  <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link type="text/css" rel="stylesheet" href="styles.css">
+  <title>Wiki Search</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="input-area">
+      <h1 class="text-center font-weight-bold">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png" alt="Wikipedia Globe Logo">Wiki Search</h1>
+      <!-- Searching interface with a randomized wikipedia button -->
+      <div class="search-bar input-group">
+        <div class="input-group-prepend">
+          <button type="button" class="btn btn-secondary btn-lg ion-search" onclick="validateSearch()"></button>
         </div>
-        <!-- Button to retrieve random wiki article -->
-        <div class="d-flex justify-content-center">
-          <a id="random-btn" class="btn btn-info btn-lg" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" role="button">
-            <span class="ion-paper-airplane"></span> Random Wiki
-          </a>
-        </div>
-        <!-- Wiki response with article or error if no search field -->
-        <div id="response"></div>
+        <input id="search" class="form-control form-control-lg" type="text" placeholder="Search wiki">
       </div>
-
+      <!-- Button to retrieve random wiki article -->
+      <div class="d-flex justify-content-center">
+        <a id="random-btn" class="btn btn-info btn-lg" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" role="button">
+          <span class="ion-paper-airplane"></span> Random Wiki
+        </a>
+      </div>
+      <!-- Wiki response with article or error if no search field -->
+      <div id="response"></div>
     </div>
 
-    <script type="text/javascript" src="app.js"></script>
-  </body>
+  </div>
+
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
 </html>
